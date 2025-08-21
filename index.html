@@ -3,220 +3,284 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NeuroAI.help — ND‑friendly AI tools & community</title>
+  <title>NeuroAI.help – Simple & Clear</title>
 
-  <!-- Basic SEO -->
-  <meta name="description" content="Practical, ND‑friendly AI tools for dyslexia, ADHD & autism — built with the community, not for it. Join the NeuroAI.help community hub." />
-  <link rel="canonical" href="https://neuroai.help/"/>
+  <!-- SEO basics -->
+  <meta name="description" content="NeuroAI.help spotlights practical AI tools that support neurodivergent minds with everyday challenges like task initiation, memory, reading, and communication." />
+  <link rel="canonical" href="https://neuroai.help/">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="NeuroAI.help — ND‑friendly AI tools & community">
-  <meta property="og:description" content="We spotlight practical AI tools for neurodivergent minds and build them with the community, not for it. Join the hub for calm updates and testing.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://neuroai.help/">
-  <meta property="og:image" content="https://neuroai.help/og-image.jpg">
-  <meta property="og:image:alt" content="NeuroAI.help — ND‑friendly AI tools and community">
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="NeuroAI.help – Simple & Clear" />
+  <meta property="og:description" content="Practical, human‑centered AI tools for neurodiverse minds." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neuroai.help/" />
+  <meta property="og:image" content="https://neuroai.help/images/neuroailogo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NeuroAI.help — ND‑friendly AI tools & community">
-  <meta name="twitter:description" content="Practical AI tools for neurodivergent minds. Calm reviews, community testing, charity‑first.">
-  <meta name="twitter:image" content="https://neuroai.help/og-image.jpg">
-
-  <!-- Favicons (optional if you already have) -->
-  <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- JSON‑LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NeuroAI.help",
-    "url": "https://neuroai.help/",
-    "logo": "https://neuroai.help/images/neuroailogo.png",
-    "sameAs": [
-      "https://www.linkedin.com/company/neuroai-help",
-      "https://www.instagram.com/neuroai.help/",
-      "https://www.youtube.com/@neuroai-help"
-    ]
-  }
-  </script>
+  <!-- Accessible font for dyslexia-friendly option -->
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --brand:#005f8f;
-      --brand-2:#0077cc;
-      --bg:#f9f9f9;
-      --text:#222;
-      --muted:#3b5566;
-      --panel:#fff;
-      --accent:#14b86a;
-      --border:rgba(0,0,0,0.08);
-      --focus:#14b86a;
-    }
-    * { box-sizing: border-box }
-    html:focus-within { scroll-behavior: smooth }
-    @media (prefers-reduced-motion: reduce){ html:focus-within{ scroll-behavior: auto } *{ animation:none!important; transition:none!important } }
+    :root { --brand:#005f8f; --link:#0077cc; --bg:#f9f9f9; --text:#222; --base-size:16px }
+    html { font-size: var(--base-size); }
     body {
-      font-family: "Segoe UI", Roboto, system-ui, sans-serif;
+      font-family: "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       margin: 0;
       padding: 2rem 1rem;
+      line-height: 1.6;
     }
-    a { color: var(--brand-2); text-decoration: none }
-    a:hover { text-decoration: underline }
-    a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px }
-
-    .skip { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden }
-    .skip:focus { position:static; width:auto; height:auto; padding:.5rem 1rem; background:#fff; border-radius:6px }
-
     main {
-      max-width: 900px;
-      background: var(--panel);
+      max-width: 800px;
+      background: #fff;
       margin: 0 auto;
       padding: 2rem;
-      border-radius: 14px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
-
-    .logo { display:block; margin: 0 auto 1rem; max-width: 220px }
-
-    .banner {
-      background: var(--brand);
-      color: #fff;
-      padding: .85rem 1.2rem;
-      border-radius: 8px;
-      font-size: 1.05rem;
-      margin-bottom: 1.25rem;
-      text-align:center;
-    }
-
-    h1, h2 { color: var(--brand) }
-    .muted { color: var(--muted) }
-
-    .cta-row { display:flex; gap:.75rem; flex-wrap:wrap; margin: 1rem 0 1.25rem }
-    .btn {
-      display:inline-block; padding:.8rem 1rem; border-radius:10px; border:1px solid var(--border);
-      background:#eef6fb; color:#0b3a52; font-weight:600; text-decoration:none;
-    }
-    .btn-primary { background: var(--brand-2); color:#fff; border-color: var(--brand-2) }
-    .btn-secondary { background:#fff }
-
-    .cards { display:grid; gap:12px; margin-top:1rem }
-    @media (min-width: 720px){ .cards { grid-template-columns: repeat(3, 1fr) } }
-    .card { background:#fff; border:1px solid var(--border); border-radius:10px; padding:1rem }
-
-    .how, .guidelines {
-      background:#fff; border:1px solid var(--border); border-radius:10px; padding:1rem; margin-top:1rem
-    }
-    .steps { display:grid; gap:.6rem; margin-top:.5rem }
-    .step { display:flex; gap:.6rem; align-items:flex-start }
-    .dot { flex: 0 0 28px; height:28px; border-radius:50%; background: var(--accent); color:#05371f; font-weight:800; display:grid; place-items:center }
-
+    h1, h2 { color: var(--brand); line-height: 1.2; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
     blockquote {
       background: #eef6fb;
       border-left: 4px solid var(--brand);
       padding: 1rem;
-      margin: 1.25rem 0;
+      margin: 2rem 0;
       font-style: italic;
     }
+    ul { padding-left: 1.2rem; }
+    .logo { display:block; margin:0 auto 1.5rem; max-width:200px; }
+    .coming-soon {
+      background: var(--brand); color: #fff;
+      padding: .8rem 1.2rem; border-radius: 6px; font-size: 1.1rem;
+      margin-bottom: 1.5rem; text-align: center;
+    }
 
-    ul { padding-left: 1.2rem }
+    /* Buttons */
+    .btn { display:inline-block; padding:.7rem 1rem; border-radius:10px; border:1px solid rgba(0,0,0,.1); font-weight:600; }
+    .btn-main { background: #0b7fc1; color:#fff; border-color:#0b7fc1; }
+    .btn-main:hover { filter:brightness(.95); text-decoration:none; }
+    .btn-secondary { background:#f0f6ff; color:#0b7fc1; }
+    .btn-secondary:hover { background:#e6f0ff; text-decoration:none; }
 
-    .social-icons { display:flex; gap:1rem; margin-top: 1rem; flex-wrap:wrap }
-    .social-icons a { display:inline-block; width:36px; height:36px }
-    .social-icons img { width:100%; height:auto; display:block }
+    .community {
+      background:#f7fbff; border:1px solid #e0edf8; padding:1rem; border-radius:12px; margin:1.5rem 0;
+    }
+    .community-buttons { display:flex; gap:.75rem; flex-wrap:wrap; margin-top:.75rem; }
 
-    footer { margin-top: 1.25rem; color: var(--muted); font-size:.95rem }
-    @media (max-width: 480px){
-      body { padding: 1rem }
-      main { padding: 1.2rem }
+    /* Socials */
+    .social-icons { display:flex; gap:1rem; margin-top:1rem; }
+    .social-icons a { display:inline-block; width:32px; height:32px; }
+    .social-icons img { width:100%; height:auto; display:block; }
+
+    /* Accessibility toolbar */
+    .a11y-toolbar {
+      display:flex; flex-wrap:wrap; gap:.5rem; align-items:center;
+      margin: .75rem 0 1.25rem; padding:.6rem .75rem;
+      border:1px solid rgba(0,0,0,.1); border-radius:10px; background:#fff;
+    }
+    .a11y-toolbar button {
+      padding:.55rem .7rem; border-radius:8px; border:1px solid rgba(0,0,0,.15);
+      background:#f7f9fc; cursor:pointer; font-weight:600;
+    }
+    .a11y-toolbar button:focus-visible { outline:3px solid #14b86a; outline-offset:3px }
+    .a11y-toolbar .spacer { flex:1 }
+    .sr-only { position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap }
+
+    /* High-contrast (dark) mode */
+    .hc body, .hc main { background:#0b1220 !important; color:#e5e7eb !important }
+    .hc main { box-shadow:none; border:1px solid #263244 }
+    .hc a { color:#8ab4ff !important }
+    .hc .btn, .hc .a11y-toolbar button { background:#162336; color:#e5e7eb; border-color:#2b3b55 }
+    .hc .community { background:#0f172a; border-color:#263244 }
+
+    /* Dyslexia-friendly font */
+    .dyslexic * { font-family: "Atkinson Hyperlegible", "Segoe UI", Roboto, system-ui, sans-serif !important }
+
+    /* Text size scaling */
+    .size-1 { --base-size:18px }
+    .size-2 { --base-size:20px }
+
+    /* Reduce motion */
+    .reduce-motion * { animation:none !important; transition:none !important; scroll-behavior:auto !important }
+
+    /* Responsive */
+    @media (max-width:480px){
+      body { padding:1rem }
+      main { padding:1.2rem }
     }
   </style>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <main role="main">
+    <div class="coming-soon" role="status">🚀 Coming Soon – Full Site Launching Shortly!</div>
+    <img src="images/neuroailogo.png" alt="NeuroAI.help logo" class="logo" width="200" height="200" decoding="async" />
 
-  <main id="main">
-    <div class="banner" role="status">🧪 You’re early — this site is in testing. Your feedback helps shape what we build next.</div>
-
-    <img src="images/neuroailogo.png" alt="NeuroAI.help logo" class="logo" width="220" height="auto">
-
-    <h1>AI tools that <em>actually</em> help neurodivergent minds.</h1>
-    <p class="muted">We spotlight practical, ND‑friendly tools for dyslexia, ADHD & autism — and we build them with the community, not for it.</p>
-
-    <!-- Community funnel buttons -->
-    <div class="cta-row" role="group" aria-label="Community access">
-      <a class="btn btn-primary" href="#signup">Sign up & get access</a>
-      <a class="btn btn-secondary" href="NOTION_COMMUNITY_HUB_URL" aria-label="Open the Community Hub if you already signed up">Already signed up? Go to Community Hub</a>
+    <!-- Accessibility Toolbar -->
+    <div class="a11y-toolbar" role="region" aria-label="Accessibility controls">
+      <span><strong>Accessibility:</strong></span>
+      <button type="button" id="a11y-font-dec" aria-label="Decrease text size">A−</button>
+      <button type="button" id="a11y-font-inc" aria-label="Increase text size">A+</button>
+      <button type="button" id="a11y-contrast" aria-pressed="false">High contrast</button>
+      <button type="button" id="a11y-dyslexic" aria-pressed="false">Readable font</button>
+      <button type="button" id="a11y-motion" aria-pressed="false">Reduce motion</button>
+      <span class="spacer" aria-hidden="true"></span>
+      <button type="button" id="a11y-read" aria-label="Read page content aloud">🔊 Read aloud</button>
+      <span id="a11y-status" class="sr-only" aria-live="polite"></span>
     </div>
 
-    <!-- Trust row -->
-    <section class="cards" aria-label="Why trust us">
-      <div class="card"><strong>Calm & clear</strong><br><span class="muted">Plain‑language reviews and demos.</span></div>
-      <div class="card"><strong>Built for ND minds</strong><br><span class="muted">Dyslexia, ADHD & autism friendly.</span></div>
-      <div class="card"><strong>Charity‑first</strong><br><span class="muted">We’re here to help, not to harvest.</span></div>
-    </section>
+    <header>
+      <h1>Welcome to NeuroAI.help</h1>
+      <p><strong>NeuroAI.help is here to make life easier for people who think differently.</strong></p>
+    </header>
 
-    <!-- Story (kept from your original) -->
-    <blockquote>AI can help us not by changing who we are, but by supporting how we already think and work.</blockquote>
-
-    <!-- How it works -->
-    <section class="how" aria-labelledby="how-title">
-      <h2 id="how-title">How it works</h2>
-      <div class="steps">
-        <div class="step"><div class="dot">1</div><div><strong>Join</strong> — Quick signup so we can send your private hub link.</div></div>
-        <div class="step"><div class="dot">2</div><div><strong>Access</strong> — Open the Notion Community Hub (resources, events, updates).</div></div>
-        <div class="step"><div class="dot">3</div><div><strong>Optional</strong> — Join Slack for light, real‑time chat.</div></div>
+    <!-- Join the Community (Step 1) -->
+    <section class="community" aria-labelledby="join">
+      <h2 id="join">Join the Community</h2>
+      <p>Join our ground‑floor volunteer team and wider NeuroAI.help community. Whether you just want to follow along or actively contribute, we keep things flexible and ND‑friendly.</p>
+      <div class="community-buttons">
+        <a class="btn btn-main" href="#hubspot-signup">Sign Up &amp; Get Access</a>
+        <!-- Keep this hidden until people have signed up and receive the link via welcome email -->
+        <a class="btn btn-secondary" href="https://your-notion-community-hub-link" style="display:none;">Already signed up? Go to Community Hub</a>
       </div>
     </section>
 
-    <!-- Community Guidelines (short) -->
-    <section class="guidelines" aria-labelledby="gl-title">
-      <h2 id="gl-title">Community Guidelines</h2>
-      <ul>
-        <li><strong>Be kind.</strong> We all show up differently.</li>
-        <li><strong>Your pace is fine.</strong> Lurking or dipping in/out is welcome.</li>
-        <li><strong>Keep it clear.</strong> Short, plain messages help everyone.</li>
-        <li><strong>No spam or private pitching.</strong></li>
-        <li><strong>Stay constructive.</strong> Share ideas that help the group grow.</li>
-      </ul>
-      <p class="muted">Full guidelines live inside the Community Hub.</p>
-    </section>
+    <p>We look for smart and simple ways that AI can support everyday challenges like:</p>
+    <ul>
+      <li>Getting started with tasks</li>
+      <li>Remembering things</li>
+      <li>Putting thoughts into words</li>
+      <li>Understanding instructions</li>
+      <li>Managing overload and stress</li>
+    </ul>
 
-    <!-- Keep your original “Why this matters / What we’re doing” content here if you like -->
+    <h2>Why This Matters</h2>
+    <p>I’ve spent years working around tools and systems that didn’t match how my brain works. Then I found something different: AI that could help me shape my thoughts, stay focused, and explain things in a way that others understood.</p>
 
-    <!-- Signup anchor (keeps your HubSpot embed intact) -->
-    <h2 id="signup">Join the Community</h2>
-    <p>We’ll share access to the hub, tools, and calm updates. No spam — unsubscribe anytime.</p>
+    <p>I remember watching a program called <em>Inside Our Dyslexic Minds</em>. There was a scene where a man could understand building plans easily by looking at the drawing. But he found the written text on the same page hard and stressful. That moment stuck with me. It showed how a small change in format can make a big difference.</p>
+
+    <p>Now, AI can read things out loud, explain them in simpler language, or even turn text into speech. These aren’t big, expensive solutions — they’re just smart ways to make life easier. That’s what NeuroAI.help is about.</p>
+
+    <blockquote>
+      AI can help us not by changing who we are, but by supporting how we already think and work.
+    </blockquote>
+
+    <h2>What We're Doing</h2>
+    <p>We’re building a helpful directory of AI tools. Every tool we share solves a real problem. We’ll explain what it does, how it helps, and who it’s useful for — in plain, clear language.</p>
+
+    <p>This site will also become the new home for the <em>Dyslexic Business Thinking</em> newsletter. More than that, we want to hear from <strong>you</strong>.</p>
+
+    <p>What has helped you? What tools are you looking for? What gets in your way?</p>
+
+    <p>💡 Got an idea? <a href="mailto:neuroai.help@gmail.com">Email us</a></p>
+
+    <!-- HubSpot form anchor -->
+    <h2 id="hubspot-signup">Sign Up</h2>
+    <p>We’ll share updates, tools, and insights. No spam, just helpful stuff.</p>
+    <!-- Replace nothing below; uses your existing EU1 portal + form id -->
     <script src="https://js-eu1.hsforms.net/forms/embed/146620767.js" defer></script>
     <div class="hs-form-frame"
          data-region="eu1"
          data-form-id="21b03f2d-a101-47c3-a90d-a7a188fab00e"
-         data-portal-id="146620767">
+         data-portal-id="146620767"
+         role="form"
+         aria-label="Join the NeuroAI.help community form">
     </div>
 
-    <!-- Social -->
     <h2>Follow Us</h2>
-    <p class="muted">We’re just getting started. Follow for updates and early content:</p>
-    <div class="social-icons" aria-label="Social links">
+    <p>We're just getting started. The full site will launch soon — with helpful tools, guides, and more. In the meantime, follow us for updates and early content:</p>
+    <nav class="social-icons" aria-label="Social media">
       <a href="https://www.linkedin.com/company/neuroai-help" target="_blank" rel="noopener" title="LinkedIn">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn" width="32" height="32" loading="lazy">
       </a>
       <a href="https://www.instagram.com/neuroai.help/" target="_blank" rel="noopener" title="Instagram">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" width="32" height="32" loading="lazy">
       </a>
       <a href="https://www.youtube.com/@neuroai-help" target="_blank" rel="noopener" title="YouTube">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/youtube.svg" alt="YouTube" width="32" height="32" loading="lazy">
       </a>
-    </div>
-
-    <footer>
-      <p>We never sell your data. This site is a calm, low‑pressure space. Thanks for helping us test.</p>
-    </footer>
+    </nav>
   </main>
+
+  <!-- Accessibility JS -->
+  <script>
+  (function(){
+    const html = document.documentElement;
+    const status = document.getElementById('a11y-status');
+
+    // Restore saved prefs
+    const prefs = JSON.parse(localStorage.getItem('a11yPrefs') || '{}');
+    if (prefs.size) html.classList.add(prefs.size);
+    if (prefs.hc)   html.classList.add('hc');
+    if (prefs.dys)  html.classList.add('dyslexic');
+    if (prefs.rm)   html.classList.add('reduce-motion');
+
+    function save(){
+      localStorage.setItem('a11yPrefs', JSON.stringify({
+        size: (html.classList.contains('size-2') && 'size-2') || (html.classList.contains('size-1') && 'size-1') || '',
+        hc: html.classList.contains('hc'),
+        dys: html.classList.contains('dyslexic'),
+        rm: html.classList.contains('reduce-motion')
+      }));
+    }
+    function announce(msg){ status.textContent = msg; }
+
+    document.getElementById('a11y-font-inc').addEventListener('click', () => {
+      if (html.classList.contains('size-1')) { html.classList.remove('size-1'); html.classList.add('size-2'); announce('Text size increased'); }
+      else if (!html.classList.contains('size-2')) { html.classList.add('size-1'); announce('Text size increased'); }
+      save();
+    });
+    document.getElementById('a11y-font-dec').addEventListener('click', () => {
+      if (html.classList.contains('size-2')) { html.classList.remove('size-2'); html.classList.add('size-1'); announce('Text size decreased'); }
+      else if (html.classList.contains('size-1')) { html.classList.remove('size-1'); announce('Text size reset'); }
+      save();
+    });
+
+    const btnHC = document.getElementById('a11y-contrast');
+    btnHC.addEventListener('click', () => {
+      const on = html.classList.toggle('hc');
+      btnHC.setAttribute('aria-pressed', on);
+      announce(on ? 'High contrast on' : 'High contrast off');
+      save();
+    });
+
+    const btnDys = document.getElementById('a11y-dyslexic');
+    btnDys.addEventListener('click', () => {
+      const on = html.classList.toggle('dyslexic');
+      btnDys.setAttribute('aria-pressed', on);
+      announce(on ? 'Readable font on' : 'Readable font off');
+      save();
+    });
+
+    const btnRM = document.getElementById('a11y-motion');
+    btnRM.addEventListener('click', () => {
+      const on = html.classList.toggle('reduce-motion');
+      btnRM.setAttribute('aria-pressed', on);
+      announce(on ? 'Reduced motion on' : 'Reduced motion off');
+      save();
+    });
+
+    const readBtn = document.getElementById('a11y-read');
+    let speaking = false, utterance;
+    function speak(text){
+      if (!('speechSynthesis' in window)) { alert('Sorry, text‑to‑speech not supported in this browser.'); return; }
+      window.speechSynthesis.cancel();
+      utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 1; utterance.pitch = 1;
+      utterance.onend = () => { speaking = false; readBtn.textContent = '🔊 Read aloud'; announce('Reading finished'); };
+      window.speechSynthesis.speak(utterance);
+    }
+    readBtn.addEventListener('click', () => {
+      if (speaking) { window.speechSynthesis.cancel(); speaking = false; readBtn.textContent='🔊 Read aloud'; announce('Reading stopped'); return; }
+      const main = document.querySelector('main') || document.body;
+      const txt = main.innerText.replace(/\s+/g,' ').trim();
+      if (txt.length < 40) { alert('Nothing meaningful to read on this page yet.'); return; }
+      speaking = true; readBtn.textContent='⏹ Stop';
+      announce('Reading started');
+      speak(txt);
+    });
+  })();
+  </script>
 </body>
 </html>
